@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import { FaAngleUp } from 'react-icons/fa';
-//import { ArrowDropUp } from '@material-ui/icons';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import './toTopButton.css';
 
@@ -8,7 +6,7 @@ const ScrollToTop = () => {
     const [showTopBtn, setShowToptn] = useState(false);
     useEffect(() => {
         window.addEventListener('scroll', () =>{
-            if(window.scrollY > 400) {
+            if(window.scrollY ) {
                 setShowToptn(true);
             } else {
                 setShowToptn(false);

@@ -3,7 +3,6 @@ import { AboutImages, AboutSection, AboutInfo } from './Home';
 import CoverSlider from '../components/cover-slider';
 
 export default function About() {
-
   const About = styled.div`
    display: flex;
   flex-direction: column;
@@ -28,10 +27,18 @@ export default function About() {
   const TeamInfo = styled.div`
   display:flex;
   gap: 60px;
+
+  p{
+    font-size: 1em;
+  }
   `
   const TeamImage = styled.img`
    border-radius: 3px;
-
+   
+   &:hover{
+     opacity: 0.5;
+     content: "Andrei"
+   }
   `
   const TeamMembers = styled.div`
   display: flex;
@@ -41,6 +48,8 @@ export default function About() {
   const Banner = styled.image`
   background-image: url('img/about/fun.jpg');
   background-size: cover;
+  position: relative;
+  background-attachment: fixed;
   height: 400px;
   display: flex;
   align-items: center;
@@ -58,6 +67,7 @@ export default function About() {
   }
   `
   const Sponsors = styled.div`
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -73,10 +83,9 @@ export default function About() {
             <p>Echipa Kermit Racing Deva a luat naștere în primăvara anului 2019, din pasiunea față de motociclism, viteză și adrenalină. Am realizat că toate acestea, pe drumurile publice nu pot fi realizate în siguranță, astfel fiind foarte apropiați, mai exact o mică familie, am luat hotărârea să înființăm o echipă de curse pentru a participa la aceste evenimente inedite. Fondatorul este președintele echipei, Căta Andrei, idea lui a venit în toamna anului 2018, după ce unul dintre colegii noștri a suferit un grav accident de motocicletă, pe un drum public. Andrei ne-a convocat la o mică ședință și ne-a propus ideea sa minunată, apoi am luat parte la o etapă de curse motociciclism viteză, în cadrul evenimentului MotoRC. Ne-a plăcut foarte mult ideea sa, iar experiența în cadrul evenimentului a fost peste așteptările noastre, astfel am apărut ca "o mică scânteie" în motociclismul viteză din țara noastră.</p>
           </AboutInfo>
           <AboutImages>
-            <img src="/img/home-img/img1.jpg" alt="" width={300}></img>
-            <img src="/img/home-img/img2.jpg" alt="" width={300}></img>
-            <img src="/img/home-img/img3.jpg" alt="" width={600}></img>
-          </AboutImages>
+            <img src="/img/home-img/img2.jpg" alt="" width={600}></img>
+            
+            </AboutImages>
         </AboutSection>
         <Banner>
         <div className='info'>
@@ -109,11 +118,12 @@ export default function About() {
           </TeamInfo>
           <h2>Membrii echipei</h2>
           <TeamMembers>
-            <TeamImage src='img/about/member1.jpg' alt='Răzvan' />
+           <TeamImage src='img/about/member1.jpg' alt='Răzvan' /> 
             <TeamImage src='img/about/member2.jpg' alt='Claudiu' />
             <TeamImage src='img/about/member4.jpg' alt='Adi' />
             <TeamImage src='img/about/member5.jpg' alt='Crina' />
           </TeamMembers>
+          <h2>Sponsori</h2>
           <Sponsors>
           <img src='img/about/partner1.png' alt='sponsor'/>
           <img src='img/about/partner2.png' alt='sponsor'/>

@@ -9,18 +9,17 @@ export default function Topbar() {
   display: flex;
   justify-content: space-between;
   height: 90px;
-  width: 100vw;
   background-color: transparent;
   color: white;
+  width:  stretch;
   position: absolute;
   top: 0;
-  padding-left: 20px;
-  padding-right: 20px;
 
   .left {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left:20px;
 
     img {
       width: 140px;
@@ -32,13 +31,14 @@ export default function Topbar() {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding-right: 50px;
+    padding-right:20px;
   }
   `
   const Menu = styled.div`
   font-family: 'Audiowide', cursive;;
   flex: 2;
-    display: flex;
+  display: flex;
+  justify-content: space-between;
 
   `
   const StyledLink = styled(Link)`

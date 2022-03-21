@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
+
 export const StyledButton = styled.button`
 width: 150px;
       background-color: rgb(62, 175, 10);
@@ -10,9 +11,9 @@ width: 150px;
       color: white;
       font-size: 1em;
       font-weight: bold;
-      transition: background-color 1s;
+      transition: background-color 2s;
       cursor: pointer;
-
+      
       &:hover {
         background-color: rgb(127, 236, 73);
         border: 1px solid rgb(127, 236, 73);
@@ -35,14 +36,13 @@ flex: 1;
 
     h2 {
       align-self: flex-start;
-      font-size: 2em;
+      font-size: 1em;
     }
 
     p {
-      padding-top: 20px;
       padding-bottom: 20px;
       color: rgb(83, 83, 83);
-      font-size: 1.3em;
+      font-size: 1em;
       text-align: justify;
     }
 `
@@ -51,21 +51,27 @@ flex: 1;
 export const AboutImages = styled.div`
   flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     padding-right: 20px;
 
     img {
       border-radius: 30px;
+      animation: Image 5s ease;
+    }
+
+    @keyframes Image {
+      0%{
+        transform: translateX(300px);
+      }
+      100%{
+        transform: translateX(0);
+      }
     }
 `
 
 export default function Home() {
-
   const StyledHome = styled.div`
   display: flex;
   flex-direction: column;
-  //margin-top: 90px;
   `
 
   const Slider = styled.div`
@@ -81,11 +87,70 @@ export default function Home() {
       font-family: "Audiowide", cursive;
       font-size: 75px;
       margin-bottom: 0;
+      animation: titleAnimation 3s ease-in;
+    }
+     
+    p{
+      font-size: 1.9em;
+      animation: parahraphAnimation 3s ease-in;
+    }
+
+    
+    @keyframes titleAnimation {
+        0%{
+          transform: translateX(900px);
+      }
+      100%{
+        transform: translateX(0);
+      }
      }
 
-    p{
-      font-size: 1.7em;
-    }
+     @keyframes parahraphAnimation {
+       0%{
+         transform: translateX(-900px);
+       }
+       100%{
+         transform: translateX(0);
+       }
+     }
+  `
+  const EventBanner = styled.div`
+  background-image: url('img/event.jpg');
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  
+  h2{
+    color: white;
+  font-size: 1.7em;
+  }
+  `
+
+  const RecommandationSide = styled.div`
+  background-image: url('img/recomandation.jpg');
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 400px;
+  margin-top: 50px;
+  `
+
+  const ArticlesSide = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+
+  img{
+    position: relative;
+  }
+  p{
+    position: absolute;
+  }
   `
   let navigate = useNavigate();
   return (
@@ -108,11 +173,20 @@ export default function Home() {
             </StyledButton>
           </AboutInfo>
           <AboutImages>
-            <img src="/img/home-img/img1.jpg" alt="" width={300}></img>
-            <img src="/img/home-img/img2.jpg" alt="" width={300}></img>
-            <img src="/img/home-img/img3.jpg" alt="" width={600}></img>
+            <img src="/img/home-img/img1.jpg" alt="" width={600}></img>
           </AboutImages>
         </AboutSection>
+        <EventBanner>
+        <h2>Ești gata să participi la următorul eveniment?</h2>
+        <StyledButton
+        onClick={() => { navigate("/events"); }}
+            >
+              {" "}
+        Participă</StyledButton>
+        </EventBanner>
+        <ArticlesSide>
+        </ArticlesSide>
+        <RecommandationSide></RecommandationSide>
       </StyledHome>
     </>
   );
