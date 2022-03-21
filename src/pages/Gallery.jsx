@@ -1,5 +1,6 @@
 import React from 'react';
 import GridGallery from '../components/GridGallery';
+import CoverSlider from '../components/cover-slider';
 
 export default function Gallery() {
 
@@ -20,6 +21,9 @@ export default function Gallery() {
      "img/gallery/gallery15.jpg"
   ]
   return (
+    <>
+    <CoverSlider></CoverSlider>
     <GridGallery key='images' images={images} />
+    </>
   )
 }

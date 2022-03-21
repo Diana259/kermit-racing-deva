@@ -72,8 +72,8 @@ export default function Topbar() {
         <StyledLink to="/contact">CONTACT</StyledLink>
       </Menu>
       <div className='right'>
-        <a href='https://www.facebook.com/KermitRacingDeva'><Facebook/></a>
-        <a href='https://www.instagram.com/kermitracingdeva/'><Instagram /></a>
+        <a href='https://www.facebook.com/KermitRacingDeva' rel="noreferrer" target='_blank'><Facebook/></a>
+        <a href='https://www.instagram.com/kermitracingdeva/' rel="noreferrer"  target='_blank'><Instagram /></a>
       </div>
     </Topbar>
   )

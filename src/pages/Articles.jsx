@@ -1,11 +1,10 @@
 import React from 'react';
+import CoverSlider from '../components/cover-slider';
 
 export default function Articles() {
   return (
       <>
-      <div className='articles'>
-    <h1>Articles</h1>
-    </div>
+      <CoverSlider></CoverSlider>
       </>
   )
 }

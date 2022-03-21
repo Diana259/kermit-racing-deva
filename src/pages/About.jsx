@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { AboutImages, AboutSection, AboutInfo } from './Home';
+import CoverSlider from '../components/cover-slider';
 
 export default function About() {
 
   const About = styled.div`
    display: flex;
   flex-direction: column;
-  margin: 90px 0;
 
   h2{
     align-self: center;
@@ -66,6 +66,7 @@ export default function About() {
   return (
     <>
       <About>
+      <CoverSlider></CoverSlider>
         <AboutSection>
           <AboutInfo>
             <h1>Înființarea echipei</h1>

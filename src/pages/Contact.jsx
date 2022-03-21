@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Person, Mail, LocalPhone, LocationOnOutlined } from '@material-ui/icons';
 import styled from 'styled-components';
 import { StyledButton } from './Home';
+import CoverSlider from '../components/cover-slider';
 
 export default function Contact() {
   const message = "Thanks, I'll replay ASAP";
@@ -23,7 +24,7 @@ export default function Contact() {
 
   const Contact = styled.div`
   display: flex;
-  padding-top: 90px;
+  //padding-top: 90px;
   color: rgb(63, 63, 63);
   `
   const ContactLeft = styled.div`
@@ -84,6 +85,7 @@ export default function Contact() {
  
   return (
     <>
+    <CoverSlider></CoverSlider>
       <Contact>
         <ContactLeft>
           <ContactUs>

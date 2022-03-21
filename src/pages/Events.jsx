@@ -1,13 +1,10 @@
 import React from 'react'
+import CoverSlider from '../components/cover-slider'
 
 export default function Events() {
   return (
     <>
-    <div className='ABOUT'>
-    <div className='content'>
-    <h2>events</h2>
-    </div>
-    </div>
+    <CoverSlider></CoverSlider>
     </>
   )
 }

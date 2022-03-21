@@ -7,14 +7,16 @@ width: 150px;
       border-radius: 5px 20px 5px 20px;
       border: 1px solid rgb(62, 175, 10);
       padding: 10px 15px;
-      color: rgb(36, 36, 36);
+      color: white;
       font-size: 1em;
+      font-weight: bold;
       transition: background-color 1s;
       cursor: pointer;
 
       &:hover {
         background-color: rgb(127, 236, 73);
         border: 1px solid rgb(127, 236, 73);
+        color: rgb(62, 175, 10);
       }
 `
 export const AboutSection = styled.div`
