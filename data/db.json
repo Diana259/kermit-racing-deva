@@ -1,0 +1,17 @@
+{
+    "posts": [
+      { "id": 1, "title": "Pilotul Cata Andrei va participa la etapa a III-a de MotoRC, în Grecia", "image": "img/article/article1.jpg" },
+      { "id": 2, "title": "Un alt eveniment de conștientizare a motociliștilor în trafic, a avut loc la Deva", "image": "img/article/article2.jpg" },
+      { "id": 3, "title": "Ne vedem in curtea colegilor de la Dark Ravens cu standul nostru de curse pentru a ne cunoaste mai bine.", "image": "img/article/article3.jpg" },
+      { "id": 4, "title": "Vom lua parte la un eveniment dedicat cailor putere, în centrul Devei. Stay tuned.", "image": "img/article/article4.jpg" },
+      { "id": 5, "title": "Kermit Racing Deva 'La cafea cu Anca' ", "image": "img/article/article5.jpg" },
+      { "id": 6, "title": "Invitație în cadrul emisiunii Actualitatea Hunedoreana, Info HD", "image": "img/article/article6.jpg" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 },
+      { "id": 2, "body": "some comment", "postId": 1 }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }

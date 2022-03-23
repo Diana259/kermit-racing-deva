@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { AboutImages, AboutSection, AboutInfo } from './Home';
 import CoverSlider from '../components/cover-slider';
+import { Phone , Email } from '@material-ui/icons'
 
 export default function About() {
   const About = styled.div`
@@ -23,6 +24,11 @@ export default function About() {
     font-size: 1.3em;
     color: rgb(83, 83, 83);
   }
+
+  h3{
+    border-bottom: 1px solid gray;
+    justify-content: center;
+  }
   `
   const TeamInfo = styled.div`
   display:flex;
@@ -30,6 +36,11 @@ export default function About() {
 
   p{
     font-size: 1em;
+  }
+
+  .contact{
+    display: flex;
+    flex-direction: column;
   }
   `
   const TeamImage = styled.img`
@@ -43,6 +54,18 @@ export default function About() {
   const TeamMembers = styled.div`
   display: flex;
   gap: 60px;
+  margin-top: 50px;
+
+  .head-text {
+   position: relative;
+}
+.text-on-image {
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  bottom: 15%;
+}
+
   `
 
   const Banner = styled.image`
@@ -106,6 +129,7 @@ export default function About() {
           </div>
       </Banner>
         <Team>
+        <h3>Membrii echipei</h3>
           <TeamInfo>
             <TeamImage src='img/about/member3.jpg' alt='Andrei' />
             <p>Echipa Kermit Racing Deva a luat naștere în primăvara anului 2019, din pasiunea față de motociclism, viteză și adrenalină. Fondatorul este președintele echipei, Căta Andrei, idea lui a venit în toamna anului 2018, după ce unul dintre colegii noștri a suferit un grav accident de motocicletă, pe un drum public. Deși în viața de zi cu zi, cei șase tineri au joburi diferite, pasiunea pentru motociclism i-a unit.
@@ -116,9 +140,8 @@ export default function About() {
               Răzvan este pilotul echipei, dar pe langă această activitate este manager șef la multinaționala unde lucreză ceilalți doi membrii ai echipei.
             </p>
           </TeamInfo>
-          <h2>Membrii echipei</h2>
           <TeamMembers>
-           <TeamImage src='img/about/member1.jpg' alt='Răzvan' /> 
+            <TeamImage src='img/about/member1.jpg' alt='Razvan' />
             <TeamImage src='img/about/member2.jpg' alt='Claudiu' />
             <TeamImage src='img/about/member4.jpg' alt='Adi' />
             <TeamImage src='img/about/member5.jpg' alt='Crina' />

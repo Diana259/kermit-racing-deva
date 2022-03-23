@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Events from './pages/Events';
 import Gallery from './pages/Gallery';
-import Articles from './pages/Articles';
+import ArticlesPage from './pages/ArticlesPage'
 import Contact from './pages/Contact';
 import ErrorPage from './components/ErrorPage';
 import Topbar from './components/Topbar';
@@ -22,7 +22,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/articles" element={<Articles />} />
+        <Route path="/articles" element={<ArticlesPage />} />
+        
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
