@@ -4,14 +4,14 @@ import styled from 'styled-components';
 
 export default function Article({article}) {
 
-    const Container = styled.div`
+  const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px;
-  width: 360px;
-  height: 260px;
+  justify-content: flex-end;
+  width: 370px;
+  height: 240px;
   background-color: #fff;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
@@ -24,22 +24,23 @@ export default function Article({article}) {
 `
 
 const Title = styled.div`
-  font-size: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: bold;
-  white-space: nowrap;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+position: absolute;
+color: white;
+  font-size: 0.8em;
+  align-self:center;
+  padding: 0 10px;
+
+
 `
 const Img = styled.img`
-  object-fit: contain;
+border-radius:12px;
+object-fit: contain;
+mask-image: -moz-linear-gradient();
 `
   return (
     <Container>
+    <Img src={article.image} alt={article.title} />
     <Title>{article.title}</Title>
-        <Img src={article.image} alt={article.title} />
     </Container>
   )
 }

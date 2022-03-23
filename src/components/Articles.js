@@ -1,6 +1,7 @@
 import React, { useEffect, useState }  from 'react';
 import { getAllArticles } from '../api/articlesApi';
 import Article from './Article';
+import { ArticlesGrid } from '../pages/ArticlesPage';
 
 export default function Articles() {
   const [articles, setArticles] = useState([])
@@ -24,10 +25,10 @@ export default function Articles() {
   }
 
   return (
-    <div>
+    <ArticlesGrid>
     {articles.map(article => (
       <Article key={article.id} article={article}/>
     ))}
-    </div>
+    </ArticlesGrid>
   )
 }

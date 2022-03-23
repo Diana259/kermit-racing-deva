@@ -5,9 +5,11 @@ import styled from 'styled-components';
 //import Article from '../components/Article';
 import Articles from '../components/Articles';
 
-const ArticlesGrid = styled.div`
+export const ArticlesGrid = styled.div`
 display: flex;
-//flex-wrap: wrap;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 40px;
 gap: 20px;
 `
 
