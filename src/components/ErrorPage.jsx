@@ -12,10 +12,11 @@ export default function ErrorPage() {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  
+
+
     h1 {
       color: rgb(134, 190, 43);
-      text-shadow: 4px 3px rgb(48, 77, 2);
+      text-shadow: 4px 3px rgb(48, 77, 2, 0.9);
       font-size: 3em;
     }
  `

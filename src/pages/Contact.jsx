@@ -24,7 +24,6 @@ export default function Contact() {
 
   const Contact = styled.div`
   display: flex;
-  //padding-top: 90px;
   color: rgb(63, 63, 63);
   `
   const ContactLeft = styled.div`

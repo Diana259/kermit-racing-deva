@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { AboutImages, AboutSection, AboutInfo } from './Home';
 import CoverSlider from '../components/cover-slider';
-import { Phone , Email } from '@material-ui/icons'
 
 export default function About() {
   const About = styled.div`

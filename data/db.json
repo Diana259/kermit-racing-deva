@@ -1,17 +1,16 @@
 {
     "posts": [
-      { "id": 1, "title": "Pilotul Cata Andrei va participa la etapa a III-a de MotoRC, în Grecia", "image": "img/article/article1.jpg" },
-      { "id": 2, "title": "Un alt eveniment de conștientizare a motociliștilor în trafic, a avut loc la Deva", "image": "img/article/article2.jpg" },
-      { "id": 3, "title": "Ne vedem in curtea colegilor de la Dark Ravens cu standul nostru de curse pentru a ne cunoaste mai bine.", "image": "img/article/article3.jpg" },
-      { "id": 4, "title": "Vom lua parte la un eveniment dedicat cailor putere, în centrul Devei. Stay tuned.", "image": "img/article/article4.jpg" },
-      { "id": 5, "title": "Kermit Racing Deva 'La cafea cu Anca' ", "image": "img/article/article5.jpg" },
-      { "id": 6, "title": "Invitație în cadrul emisiunii Actualitatea Hunedoreana, Info HD", "image": "img/article/article6.jpg" }
+      { "id": 1, "date": "11-13 Iun", "title": "Pilotul Cata Andrei va participa la etapa a III-a de MotoRC, în Grecia", "image": "img/article/article1.jpg" },
+      { "id": 2, "date": "17 Oct", "title": "Un alt eveniment de conștientizare a motociliștilor în trafic, a avut loc la Deva", "image": "img/article/article2.jpg" },
+      { "id": 3, "date": "23-24 Aug", "title": "Ne vedem in curtea colegilor de la Dark Ravens cu standul nostru de curse pentru a ne cunoaste mai bine.", "image": "img/article/article3.jpg" },
+      { "id": 4, "date": "21 Iul", "title": "Vom lua parte la un eveniment dedicat cailor putere, în centrul Devei. Stay tuned.", "image": "img/article/article4.jpg" },
+      { "id": 5, "date": "25 Mar", "title": "Kermit Racing Deva 'La cafea cu Anca' ", "image": "img/article/article5.jpg" },
+      { "id": 6, "date": "9 Apr", "title": "Invitație în cadrul emisiunii Actualitatea Hunedoreana, Info HD", "image": "img/article/article6.jpg" }
     ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 },
-      { "id": 2, "body": "some comment", "postId": 1 }
-    ],
-    "profile": {
-      "name": "typicode"
-    }
+    "events": [
+      {"id": 1, "date": "Dum, 31 mar. 2019", "title": "Campanie de constientizare in trafic Deva", "content": "Dragi prieteni motociclisti, va asteptam in data de 31.03.2019 ora 12:00, in Piata Cetatii din orasul Deva. Motivul intalnirii noastre este unul bine cunoscut si anume constientizarea celorlalti participanti la trafic asupra prezentei noastre pe sosele. De asemenea ii invitam pe cei ce nu ne cunosc in trafic sa ne admire motocicletele, noi sau vechi, viu colorate sau cromate, cu forme clasice sau futuriste.", "image": "img/events/atentie.jpg"},
+      {"id": 2, "date": "Vin, 15 feb 2019", "title": "Kermit Racing Deva at Bikes on Ice", "content": "Salutări pasionați și viitori pasionați de motociclism! Vă invităm in acest weekend 15 - 17 Februarie la întrunirea Moto Bikes on Ice sa cunoașteți echipa Kermit Racing Deva și sa profitați de surprizele pe care vi le-am pregătit. O să aveți oportunitatea de a discuta atât cu piloții cat și staff-ul echipei, dar nu numai... O să puteți să vă urcați pe motocicletele care o sa participe la curse in acest an. Haideți cu toții la acest eveniment pentru a înțelege și a vedea cu alti ochi ce înseamnă Motorsportul.", "image": "img/events/bikes.jpg"},
+      {"id": 3, "date": "Sâm, 17 oct. 2020", "title": "Atenție la motocicliști ediția II", "content": "Dragi prieteni motociclisti, va asteptam in data de 17.10.2020 ora 12:00, in Piata Cetatii (parcare telecabina) din orasul Deva, judetul Hunedoara, unde va avea loc o noua campanie de constientizarea a motociclistilor in trafic cu scopul reducerii numarului de accidente care se produc intre motociclisti si alte categorii de participanti la trafic. In cadrul acestui eveniment o sa impartim tuturor participantilor la trafic pliante cu privire la cauzele comune ale accidentelor rutiere si va exista un cadru medical pentru o scurta prezentare a masurilor de prim ajutor in cazul unui accident de motocicleta.", "image": "img/events/event1.jpg"},
+      {"id": 4, "date": "Joi, 15 aug. 2019", "title": "Joia Moto Reno", "content": "Joia moto astazi 15 08 2019 Adunarea se face la terasa Reno in Deva.Ce facem la joia moto?Ne adunam in numar cat mai mare,povestim despre plimbari moto,evenimente moto,schimb de pareri,etc.", "image": "img/events/joia.jpg"}
+    ]
   }
