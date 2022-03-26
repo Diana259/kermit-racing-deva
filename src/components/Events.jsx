@@ -1,4 +1,4 @@
-import { getAllEvents } from "../api/articlesApi";
+import { getAllEvents } from "../api/websiteApi";
 import React, { useEffect, useState }  from 'react';
 import Event from "./Event";
 import { EventsGrid } from "../pages/EventsPage";

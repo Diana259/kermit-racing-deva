@@ -1,8 +1,8 @@
 import CoverSlider from '../components/cover-slider';
 import styled from 'styled-components';
-import Articles from '../components/Articles';
+import Posts from '../components/Posts';
 
-export const ArticlesGrid = styled.div`
+export const PostsGrid = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -11,14 +11,14 @@ margin-bottom: 40px;
 gap: 20px;
 `
 
-export default function ArticlesPage() {
+export default function PostsPage() {
 
   return (
     <>
       <CoverSlider />
-      <ArticlesGrid>
-        <Articles />
-      </ArticlesGrid>
+      <PostsGrid>
+        <Posts />
+      </PostsGrid>
     </>
   )
 }

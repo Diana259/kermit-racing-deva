@@ -18,7 +18,7 @@ transition: box-shadow .2s;
   box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.2);
 }
 `
-export default function Article({article}) {
+export default function Post({post}) {
 
 const Img = styled.img`
 border-radius:12px;
@@ -42,7 +42,7 @@ width:50px;
 height: 50px;
 border-right: 1.5px solid black;
 `
-const ArticleContent = styled.div`
+const PostContent = styled.div`
 position: absolute;
 display: flex;
 color: black;
@@ -52,11 +52,11 @@ gap: 10px;
 `
   return (
     <Container>
-    <Img src={article.image} alt={article.title} />
-    <ArticleContent>
-    <Date>{article.date}</Date>
-    <Title>{article.title}</Title>
-    </ArticleContent>
+    <Img src={post.image} alt={post.title} />
+    <PostContent>
+    <Date>{post.date}</Date>
+    <Title>{post.title}</Title>
+    </PostContent>
     </Container>
   )
 }
