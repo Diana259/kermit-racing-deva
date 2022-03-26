@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { AboutImages, AboutSection, AboutInfo } from './Home';
 import CoverSlider from '../components/cover-slider';
+import { Facebook } from '@material-ui/icons';
 
 export default function About() {
   const About = styled.div`
@@ -24,9 +25,9 @@ export default function About() {
     color: rgb(83, 83, 83);
   }
 
-  h3{
+  h2{
     border-bottom: 1px solid gray;
-    justify-content: center;
+    align-self:center;
   }
   `
   const TeamInfo = styled.div`
@@ -42,29 +43,48 @@ export default function About() {
     flex-direction: column;
   }
   `
-  const TeamImage = styled.img`
-   border-radius: 3px;
+  const TeamImage = styled.div`
+  background-color: #B1FF8A;
+  display: flex;
+  flex-direction:column;
+  border-radius: 9px;
+  box-shadow: 10px 5px 5px rgb(115 115 115);
+  transition: box-shadow .3s;
+  max-height: 430px;
+
+  &:hover{
+    box-shadow: 10px 5px 5px rgb(93 91 91);
+  }
    
-   &:hover{
-     opacity: 0.5;
-     content: "Andrei"
+   img{
+    border-radius: 9px 9px 0 0 ;
    }
+  `
+
+  const ImageContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  
+  h3{
+    border-bottom: none;
+  }
+  `
+
+  const Content = styled.div`
+  display: flex ;
+  flex-direction: column;
+
+  p{
+    margin-top: 5px;
+    margin-bottom: none;
+  }
   `
   const TeamMembers = styled.div`
   display: flex;
-  gap: 60px;
-  margin-top: 50px;
-
-  .head-text {
-   position: relative;
-}
-.text-on-image {
-  position: absolute;
-  right: 50%;
-  left: 50%;
-  bottom: 15%;
-}
-
+  gap: 50px;
+  margin: 50px 0;
   `
 
   const Banner = styled.image`
@@ -106,7 +126,6 @@ export default function About() {
           </AboutInfo>
           <AboutImages>
             <img src="/img/home-img/img2.jpg" alt="" width={600}></img>
-            
             </AboutImages>
         </AboutSection>
         <Banner>
@@ -128,22 +147,53 @@ export default function About() {
           </div>
       </Banner>
         <Team>
-        <h3>Membrii echipei</h3>
+        <h2>Membrii echipei</h2>
           <TeamInfo>
-            <TeamImage src='img/about/member3.jpg' alt='Andrei' />
+            <TeamImage><img src='img/about/member3.jpg' alt='Andrei' />
+            <ImageContent>
+            <h3>Căta Andrei</h3>
+            <a href='https://www.facebook.com/cata.andrei.9' target="_blank" rel='noreferrer'><Facebook/></a>
+            </ImageContent>
+            </TeamImage>
+            <Content>
             <p>Echipa Kermit Racing Deva a luat naștere în primăvara anului 2019, din pasiunea față de motociclism, viteză și adrenalină. Fondatorul este președintele echipei, Căta Andrei, idea lui a venit în toamna anului 2018, după ce unul dintre colegii noștri a suferit un grav accident de motocicletă, pe un drum public. Deși în viața de zi cu zi, cei șase tineri au joburi diferite, pasiunea pentru motociclism i-a unit.
-              Președintele echipei, Andrei și-a îmbinat munca cu pasiunea, deschizându-și în urmă cu ceva timp propriul service de motociclete.
-              Adrian, fost pilot Kermit și actual mecanic al echipei, lucrază la o multinațională care produce și frunizează cablaje in domeniul Motorsport si Automotive.
-              Claudiu este unul dintre mecanicii echipei, lucreaza la o companie care fabrică mobilier, iar în timpul liber confecționează motocilete custom și ale obiecte handmade."
-              Crina face parte din staff-ul echipei, dar în viața de zi cu zi este maganer de producție și calitate la o multinațională producătoare și furnizoare de cablaje pentru Motorsport și Automotive.
-              Răzvan este pilotul echipei, dar pe langă această activitate este manager șef la multinaționala unde lucreză ceilalți doi membrii ai echipei.
             </p>
+            <p>Președintele echipei, <b>Andrei</b> și-a îmbinat munca cu pasiunea, deschizându-și în urmă cu ceva timp propriul service de motociclete.</p>
+           <p><b>Adrian</b>, fost pilot Kermit și actual mecanic al echipei, lucrază la o multinațională care produce și frunizează cablaje in domeniul Motorsport si Automotive.</p>
+           <p><b>Claudiu</b> este unul dintre mecanicii echipei, lucreaza la o companie care fabrică mobilier, iar în timpul liber confecționează motocilete custom și ale obiecte handmade."</p>
+           <p><b>Crina</b> face parte din staff-ul echipei, dar în viața de zi cu zi este maganer de producție și calitate la o multinațională producătoare și furnizoare de cablaje pentru Motorsport și Automotive.</p>
+           <p><b>Răzvan</b> este pilotul echipei, dar pe langă această activitate este manager șef la multinaționala unde lucreză ceilalți doi membrii ai echipei.</p>
+            </Content>
           </TeamInfo>
           <TeamMembers>
-            <TeamImage src='img/about/member1.jpg' alt='Razvan' />
-            <TeamImage src='img/about/member2.jpg' alt='Claudiu' />
-            <TeamImage src='img/about/member4.jpg' alt='Adi' />
-            <TeamImage src='img/about/member5.jpg' alt='Crina' />
+            <TeamImage>
+            <img src='img/about/member1.jpg' alt='Razvan'/>
+            <ImageContent>
+            <h3>Florea Răzvan</h3>
+            <a href='https://www.facebook.com/floreavlad.razvan' target="_blank" rel='noreferrer'><Facebook/></a>
+            </ImageContent>
+            </TeamImage>
+            <TeamImage>
+            <img src='img/about/member2.jpg' alt='Claudiu' />
+            <ImageContent>
+            <h3>Ariton Claudiu</h3>
+            <a href='https://www.facebook.com/claudiu.ariton.16' target="_blank" rel='noreferrer'><Facebook/></a>
+            </ImageContent>
+            </TeamImage>
+            <TeamImage>
+            <img src='img/about/member4.jpg' alt='Adi' />
+            <ImageContent>
+            <h3>Gogoașă Adrian</h3>
+            <a href='https://www.facebook.com/bigghhy' target="_blank" rel='noreferrer'><Facebook/></a>
+            </ImageContent>
+            </TeamImage>
+            <TeamImage>
+            <img src='img/about/member5.jpg' alt='Crina' />
+            <ImageContent>
+            <h3>Florea Crina</h3>
+            <a href='https://www.facebook.com/profile.php?id=100003217419811' target="_blank" rel='noreferrer'><Facebook/></a>
+            </ImageContent>
+            </TeamImage>
           </TeamMembers>
           <h2>Sponsori</h2>
           <Sponsors>

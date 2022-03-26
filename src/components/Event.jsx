@@ -4,7 +4,7 @@ import React from 'react'
 export default function Event({ event }) {
     const EventBody = styled.div`
     display: flex;
-    background-color:rgb(101, 199, 71);
+    background-color:rgb(97 233 55);
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     cursor: pointer;

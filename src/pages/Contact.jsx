@@ -1,15 +1,21 @@
-import React from 'react'
-import emailjs from '@emailjs/browser';
+import React, {useState, useEffect} from 'react'
+import emailjs, { sendForm } from '@emailjs/browser';
 import { Person, Mail, LocalPhone, LocationOnOutlined } from '@material-ui/icons';
 import styled from 'styled-components';
 import { StyledButton } from './Home';
 import CoverSlider from '../components/cover-slider';
 
 export default function Contact() {
-  const message = "Thanks, I'll replay ASAP";
+ const [message, setMessage] = useState(false)
 
+ const handleSubmit = (e)=> {
+   e.preventDefault();
+
+   setMessage(true);
+ }
   const sendEmail = (e) => {
     e.preventDefault();
+
 
     emailjs.sendForm('service_ozod71r', 'template_a705vaq', e.target, 'TCb6YF-7CG0ZNJQfl')
       .then((result) => {
@@ -25,6 +31,7 @@ export default function Contact() {
   const Contact = styled.div`
   display: flex;
   color: rgb(63, 63, 63);
+  flex-wrap: wrap;
   `
   const ContactLeft = styled.div`
   flex: 1;
@@ -40,19 +47,34 @@ export default function Contact() {
        font-size: 2em;
        margin-bottom: 10px;
      }
-
-      .itemContaniner {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-
-        .icon {
-          display: flex;
-          flex-direction: column;
-          font-size: 2.5em;
-        }
-      }
   `
+  const ContactInfo = styled.div`
+  display: flex;
+  flex-direction:column;
+  `
+  const Informations = styled.div`
+display: flex;
+align-items: center;
+
+`
+  const InformationsDetails = styled.div`
+display:flex;
+width: 100%;
+gap:7px;
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2em;
+}
+`
+
+  const InformationsContainer = styled.div`
+display: flex;
+max-width:290px;
+align-items:center;
+flex: 1;
+`
 
   const StyledForm = styled.form`
   display: flex;
@@ -81,38 +103,43 @@ export default function Contact() {
       width: 70%;
     }
   `
- 
+
   return (
     <>
-    <CoverSlider></CoverSlider>
+      <CoverSlider></CoverSlider>
       <Contact>
         <ContactLeft>
           <ContactUs>
-            <div>
+            <ContactInfo>
               <h2>Informatii de contact</h2>
-              <div className='itemContaniner'>
-                <Person className='icon' />
-                <h3>Nume:</h3>
-                <span>Căta Andrei</span>
-                <LocalPhone className='icon' />
-                <h3>Tel:</h3>
-                <span>+40 734 490 434</span>
-              </div>
-              <div className='itemContaniner'>
-                <LocationOnOutlined className='icon' />
-                <h3>Locația:</h3>
-                <span>Strada C.A.Rosetti, Deva, Nr.2B</span>
-                <Mail className='icon' />
-                <h3>Mail:</h3>
-                <span>kermit_racing_deva@yahoo.com</span>
-              </div>
-              <div className='itemContaniner'>
+              <Informations>
+                <InformationsDetails>
+                  <InformationsContainer>
+                    <Person className='icon' />
+                    <span>Căta Andrei</span>
+                  </InformationsContainer>
+                  <InformationsContainer>
+                    <LocalPhone className='icon' />
+                    <span>+40 734 490 434</span>
+                  </InformationsContainer>
+                </InformationsDetails>
+              </Informations>
+              <Informations>
+                <InformationsDetails>
+                  <InformationsContainer>
+                    <LocationOnOutlined className='icon' />
+                    <span>Strada C.A.Rosetti, Deva, Nr.2B</span>
+                  </InformationsContainer>
+                  <InformationsContainer>
+                    <Mail className='icon' />
+                    <span>kermit_racing_deva@yahoo.com</span>
+                  </InformationsContainer>
+                </InformationsDetails>
+              </Informations>
 
-              </div>
-
-            </div>
+            </ContactInfo>
             <h2>Trimite un mesaj</h2>
-            <StyledForm onSubmit={sendEmail}>
+            <StyledForm onSubmit={sendEmail && handleSubmit}>
               <label htmlFor='email'>Email:</label>
               <input type='text' id="email" placeholder='Email' name='email' />
               <label htmlFor='subject'>Subiect:</label>
@@ -120,7 +147,7 @@ export default function Contact() {
               <label htmlFor='message'>Mesaj:</label>
               <textarea id="message" placeholder='Message' name='message'></textarea>
               <StyledButton type='submit'>Send</StyledButton>
-
+              {message && <span>Mulțumim! Vom răspunde în curînd!</span>}
             </StyledForm>
           </ContactUs>
         </ContactLeft>
