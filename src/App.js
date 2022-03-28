@@ -8,7 +8,7 @@ import PostsPage from './pages/PostsPage';
 import Contact from './pages/Contact';
 import ErrorPage from './components/ErrorPage';
 import Topbar from './components/Topbar';
-import Footer from './components/Footer';
+import StyledFooter from './components/Footer';
 import ScrollToTop from './components/ToTopButton';
 
 
@@ -27,7 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Footer />
+      <StyledFooter />
     </Router>
   );
 }

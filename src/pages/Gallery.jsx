@@ -22,8 +22,8 @@ export default function Gallery() {
   ]
   return (
     <>
-    <CoverSlider></CoverSlider>
-    <GridGallery key='images' images={images} />
+    <CoverSlider/>
+    <GridGallery key={images} images={images} />
     </>
   )
 }

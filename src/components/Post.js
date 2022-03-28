@@ -18,7 +18,6 @@ transition: box-shadow .2s;
   box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.2);
 }
 `
-export default function Post({post}) {
 
 const Img = styled.img`
 border-radius:12px;
@@ -29,19 +28,6 @@ img{
   color: #606060;
 }
 `
-const Title = styled.div`
-flex:3;
-font-size: 0.8em;
-align-self:center;
-`
-
-const Date = styled.div`
-display: flex;
-justify-content: center;
-width:50px;
-height: 50px;
-border-right: 1.5px solid black;
-`
 const PostContent = styled.div`
 position: absolute;
 display: flex;
@@ -50,6 +36,23 @@ font-weight:200px;
 padding:0 10px 10px;
 gap: 10px;
 `
+
+const Title = styled.div`
+flex:3;
+font-size: 0.8em;
+align-self:center;
+`
+
+const Date = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+width:50px;
+height: 50px;
+border-right: 1.5px solid black;
+`
+export default function Post({post}) {
+
   return (
     <Container>
     <Img src={post.image} alt={post.title} />

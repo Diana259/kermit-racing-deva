@@ -10,15 +10,18 @@ export const EventsGrid= styled.div`
      margin: 0px 20px;
      margin-bottom:40px;
     `
+
+const FutureEvents = styled.div`
+display: flex;
+flex-direction: column;
+margin: 0 20px;
+`
+
 export default function EventsPage() {
-  const FutureEvents = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 20px;
-  `
+
   return (
     <>
-    <CoverSlider></CoverSlider>
+    <CoverSlider/>
     <EventsGrid>
     <FutureEvents>
     <h3>EVENIMENTE VIITOARE</h3>

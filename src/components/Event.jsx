@@ -1,8 +1,7 @@
 import  styled  from 'styled-components'
 import React from 'react'
 
-export default function Event({ event }) {
-    const EventBody = styled.div`
+const EventBody = styled.div`
     display: flex;
     background-color:rgb(97 233 55);
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
@@ -34,6 +33,9 @@ export default function Event({ event }) {
     `
     const Content = styled.p`
     `
+
+export default function Event({ event }) {
+    
     return (
         <EventBody>
             <EventImgage src={event.image} alt={event.title} />

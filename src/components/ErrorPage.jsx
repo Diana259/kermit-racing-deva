@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-export default function ErrorPage() {
-
- const ErrorPage = styled.div `
+const StyledErrorPage = styled.div `
  height: 100vh;
     padding-top: 90px;
     width: 100%;
@@ -20,13 +18,15 @@ export default function ErrorPage() {
       font-size: 3em;
     }
  `
+
+export default function ErrorPage() {
     
   return (
       <>
-      <ErrorPage>
+      <StyledErrorPage>
       <h1>Page Not Found</h1>
       <img src='/img/no.png' alt='404'/>
-      </ErrorPage>
+      </StyledErrorPage>
       </>
   )
 }

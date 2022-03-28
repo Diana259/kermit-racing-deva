@@ -3,8 +3,7 @@ import { AboutImages, AboutSection, AboutInfo } from './Home';
 import CoverSlider from '../components/cover-slider';
 import { Facebook } from '@material-ui/icons';
 
-export default function About() {
-  const About = styled.div`
+const StyledAbout = styled.div`
    display: flex;
   flex-direction: column;
 
@@ -87,7 +86,7 @@ export default function About() {
   margin: 50px 0;
   `
 
-  const Banner = styled.image`
+  const Banner = styled.div`
   background-image: url('img/about/fun.jpg');
   background-size: cover;
   position: relative;
@@ -115,10 +114,13 @@ export default function About() {
   justify-content: space-around;
   width: 100%;
   `
+
+export default function About() {
+  
   return (
     <>
-      <About>
-      <CoverSlider></CoverSlider>
+      <StyledAbout>
+      <CoverSlider/>
         <AboutSection>
           <AboutInfo>
             <h1>Înființarea echipei</h1>
@@ -202,7 +204,7 @@ export default function About() {
           <img src='img/about/partner3.png' alt='sponsor'/>
           </Sponsors>
         </Team>
-      </About>
+      </StyledAbout>
     </>
   );
 }

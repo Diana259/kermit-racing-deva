@@ -1,79 +1,84 @@
 import React from 'react';
-import { Instagram , Facebook } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
+import { Instagram, Facebook } from '@material-ui/icons';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default function Topbar() {
-  const Topbar = styled.div`
+const StyledTopbar = styled.div`
+display: flex;
+justify-content: space-between;
+height: 90px;
+background-color: transparent;
+color: white;
+width:  stretch;
+position: absolute;
+top: 0;
+
+.left {
   display: flex;
-  justify-content: space-between;
-  height: 90px;
-  background-color: transparent;
-  color: white;
-  width:  stretch;
-  position: absolute;
-  top: 0;
+  align-items: center;
+  justify-content: center;
+  padding-left:20px;
 
-  .left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left:20px;
+  img {
+    width: 140px;
+  }
+}
 
-    img {
-      width: 140px;
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-right:20px;
+}
+`
+const Menu = styled.div`
+font-family: 'Audiowide', cursive;;
+flex: 2;
+display: flex;
+justify-content: center;
+align-items: center;
+
+`
+const StyledLink = styled(NavLink)`
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Audiowide', cursive;
+color: white;
+text-decoration: none;
+font-size: 1em;
+height: 90px;
+flex: 1;
+
+    &:hover{
+      color: lightgreen;
     }
-  }
 
-  .right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding-right:20px;
-  }
-  `
-  const Menu = styled.div`
-  font-family: 'Audiowide', cursive;;
-  flex: 2;
-  display: flex;
-  justify-content: space-between;
+    &.active{
+      color: lightgreen;
+    }
+`
 
-  `
-  const StyledLink = styled(Link)`
-  display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Audiowide', cursive;
-      color: white;
-      text-decoration: none;
-      font-size: 1em;
-      height: 90px;
-      flex: 1;
-
-      &:hover{
-        color: lightgreen;
-      }
-  `
-
+export default function Topbar() {
 
   return (
-    <Topbar>
+    <StyledTopbar>
       <div className='left'>
         <img src='img/logo.png' alt='Kermit Racing Deva'></img>
       </div>
       <Menu>
         <StyledLink to="/">ACASĂ</StyledLink>
         <StyledLink to="/about">DESPRE</StyledLink>
-        <StyledLink to="/articles">NOUTATI</StyledLink>
+        <StyledLink to="/posts">NOUTATI</StyledLink>
         <StyledLink to="/events">EVENIMENTE</StyledLink>
         <StyledLink to="/gallery">GALERIE</StyledLink>
         <StyledLink to="/contact">CONTACT</StyledLink>
       </Menu>
       <div className='right'>
-        <a href='https://www.facebook.com/KermitRacingDeva' rel="noreferrer" target='_blank'><Facebook/></a>
-        <a href='https://www.instagram.com/kermitracingdeva/' rel="noreferrer"  target='_blank'><Instagram /></a>
+        <a href='https://www.facebook.com/KermitRacingDeva' rel="noreferrer" target='_blank'><Facebook /></a>
+        <a href='https://www.instagram.com/kermitracingdeva/' rel="noreferrer" target='_blank'><Instagram /></a>
       </div>
-    </Topbar>
+    </StyledTopbar>
   )
 }
