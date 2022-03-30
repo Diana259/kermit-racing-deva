@@ -56,6 +56,8 @@ export const AboutImages = styled.div`
     img {
       border-radius: 30px;
       animation: Image 5s ease;
+      max-width: 100%;
+      height: auto;
     }
 
     @keyframes Image {
@@ -150,17 +152,39 @@ const StyledHome = styled.div`
    display: flex;
    align-items:center;
   justify-content:center;
+  flex-wrap: wrap;
    gap: 50px;
    `
   const RecomandationContainer = styled.div`
+  position: relative;
 display: flex;
 flex-direction: column;
 background-color: whitesmoke;
 
-img:hover{
-  opacity: 0.6;
+img{
+  position: relative;
+  z-index: 9;
+
+  &:hover{
+    opacity: 0.3;
+    z-index: 3;
+  }
 }
 `
+ const RecomandationInfo = styled.div`
+ position: absolute;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 0 10px;
+ text-align: justify;
+ height: 330px;
+ z-index: 6;
+
+ h5{
+  font-weight: 200;
+ }
+ `
 
   const PostsSide = styled.div`
   display: flex;
@@ -199,7 +223,7 @@ export default function Home() {
             </StyledButton>
           </AboutInfo>
           <AboutImages>
-            <img src="/img/home-img/img1.jpg" alt="" width={600}></img>
+            <img src="/img/home-img/img1.jpg" alt="" ></img>
           </AboutImages>
         </AboutSection>
         <EventBanner>
@@ -217,15 +241,26 @@ export default function Home() {
           <Wrapper>
             <RecomandationContainer>
               <img src='img/home-img/casca.jpg' alt='casca' width='250px' />
-            </RecomandationContainer>
+              <RecomandationInfo>
+              <h5>Casca integrală este cea mai sigură alegere, având cel mai ridicat nivel de siguranță în caz de accident. Casca trebuie să fie fixă, să te strângă puțin în zona obrajilor, să nu încapă degete între frunte și cască.</h5></RecomandationInfo>
+              </RecomandationContainer>
             <RecomandationContainer>
               <img src='img/home-img/combinezon.jpeg' alt='combinezon' width='250px' />
+              <RecomandationInfo>
+              <h5>Costumele se prezintă în seturi din una și două piese, care oferă același nivel de protecție, ventilație, selecție de materiale ca o jachetă și combinații de pantaloni. S-ar putea susține, de asemenea, că există o impermeabilizare mai bună la costumele dintr-o singură piesă.</h5>
+              </RecomandationInfo>
             </RecomandationContainer>
             <RecomandationContainer>
               <img src='img/home-img/ghete.jpeg' alt='ghete' width='250px' />
+              <RecomandationInfo>
+              <h5>Cizmele touring sunt mai moi și se pot purta o zi întreagă fără să deranjeze. Protecția optimă este oferită de cizmele racing ranforsate, dar acestea devin în general incomode după o jumătate de zi, căci sunt foarte rigide. Trebuie să fie cât mai fixe, fără să fie dureroase.</h5>
+              </RecomandationInfo>
             </RecomandationContainer>
             <RecomandationContainer>
               <img src='img/home-img/manusi.jpeg' alt='manusi' width='250px' />
+              <RecomandationInfo>
+              <h5>Un element din cadrul echipamentului moto, care de multe ori tinde să fie omis. Indiferent că sunt fabricate din material textil sau din piele, mănuşile moto oferă protecţie în cazul căzăturilor (fiind ranforsate în anumite puncte specifice), împotriva curenţilor de aer (calzi sau reci) şi oferă un ajutor suplimentar în controlul manșonului de acceleraţie sau a manetelor de frână/ambreiaj.</h5>
+              </RecomandationInfo>
             </RecomandationContainer>
           </Wrapper>
         </RecommandationsSide>

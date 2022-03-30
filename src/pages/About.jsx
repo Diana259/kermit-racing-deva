@@ -13,6 +13,7 @@ const StyledAbout = styled.div`
     font-size: 2em;
   }
   `
+
   const Team = styled.div`
   display: flex;
   flex-direction:column;
@@ -74,6 +75,7 @@ const StyledAbout = styled.div`
   const Content = styled.div`
   display: flex ;
   flex-direction: column;
+  width: 90%;
 
   p{
     margin-top: 5px;
@@ -82,6 +84,7 @@ const StyledAbout = styled.div`
   `
   const TeamMembers = styled.div`
   display: flex;
+  flex-wrap:wrap;
   gap: 50px;
   margin: 50px 0;
   `
@@ -127,7 +130,7 @@ export default function About() {
             <p>Echipa Kermit Racing Deva a luat naștere în primăvara anului 2019, din pasiunea față de motociclism, viteză și adrenalină. Am realizat că toate acestea, pe drumurile publice nu pot fi realizate în siguranță, astfel fiind foarte apropiați, mai exact o mică familie, am luat hotărârea să înființăm o echipă de curse pentru a participa la aceste evenimente inedite. Fondatorul este președintele echipei, Căta Andrei, idea lui a venit în toamna anului 2018, după ce unul dintre colegii noștri a suferit un grav accident de motocicletă, pe un drum public. Andrei ne-a convocat la o mică ședință și ne-a propus ideea sa minunată, apoi am luat parte la o etapă de curse motociciclism viteză, în cadrul evenimentului MotoRC. Ne-a plăcut foarte mult ideea sa, iar experiența în cadrul evenimentului a fost peste așteptările noastre, astfel am apărut ca "o mică scânteie" în motociclismul viteză din țara noastră.</p>
           </AboutInfo>
           <AboutImages>
-            <img src="/img/home-img/img2.jpg" alt="" width={600}></img>
+            <img src="/img/home-img/img2.jpg" alt="" ></img>
             </AboutImages>
         </AboutSection>
         <Banner>
